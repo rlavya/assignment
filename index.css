@@ -4,7 +4,7 @@ body {
   margin:0;
   padding:0;
   background-color: antiquewhite;
-  overflow: hidden;
+
 }
 main {
   min-height: 77.5vh;
@@ -12,7 +12,7 @@ main {
 #footer {
   bottom: 0;
   width: 100%;
-  height: 70px;
+  height: 65px;
   clear: both;
   text-align: center;
   font-size: large;
@@ -58,10 +58,10 @@ nav ul a {
   font-family: serif;
 }
 div.img {
-  margin: 10px;
+  margin: 30px;
   border: 1px solid #ccc;
   float: left;
-  width: 300px;
+  width: 280px;
 }
 div.img img {
   width: 100%;
