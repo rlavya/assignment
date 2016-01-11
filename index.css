@@ -9,7 +9,7 @@ body {
 main {
   min-height: 77.5vh;
   position: relative;
-  top: 84;
+  top: 84px;
 }
 #footer {
   bottom: 0px;
@@ -98,4 +98,3 @@ div.desc {
   clear: both;
   height: 0;
 }
-
