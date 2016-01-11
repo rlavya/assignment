@@ -67,11 +67,11 @@ nav ul a {
   font-size: medium;
   font-family: serif;
   display: inline-block;
-  width: 49%;
+  width: 45%;
   position: absolute;
 }
 .home_image {
-  width: auto;
+  width: 50%;
   display: inline-block;
   padding: 0px 25px 25px;
 }
