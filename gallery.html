@@ -8,12 +8,10 @@
     <script src="jquery.min.js"></script>
     <script type="text/javascript">
     $(document).ready( function(){
-      console.log('fadf');
       $.getJSON('image.json', function(data) {
         $.each(data.items, function (i, f) {
             $("#img_container").append("<div class='img'><img src='" + f.url +"' width='400' height='300'/><div class='desc'>" +f.caption
                            + " </div></div>");
-            console.log(f.url);
         });
     });
     $('#img_container').on('click', '.img', function(event){
@@ -28,7 +26,6 @@
     });
     });
     </script>
-
 </head>
 <body>
 <header id="header">
