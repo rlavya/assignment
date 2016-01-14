@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My website</title>
+  <link href="logo.png" rel="icon">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready( function(){
+    $.getJSON('user_details.json', function(data) {
+      $.each(data.details, function (i, f) {
+          $("#user_details tbody").append("<tr><td></td><td>"+f.firstname+"</td><td>"+f.lastname+"</td><td>"+f.email+"</td><td>"+f.status+"</td></tr>");
+      });
+  });
+  });
+  function add() {
+    $('.form_outer').addClass('display_block');
+    $('.form_inner').addClass('display_block');
+  }
+  </script>
+</head>
+  <body>
+    <header id="header">
+      <div id="top-nav">
+        <div class="top-navbar">
+          <center class="inner-nav" id="heading"><a href="index.html" >My website</a></center>
+          <div class="inner-nav page_links" style="float:left"><a href="home.html">Home</a></div>
+          <div class="inner-nav page_links " style="float:left"><a href="gallery.html">Gallery</a></div>
+          <div class="inner-nav page_links " style="float:left"><a href="user_management.html">User Management</a></div>
+        </div>
+      </div>
+    </header>
+    <main id="home_page">
+      <div style="margin:20px 40px 0px 40px">
+        <input type="button" value="Add" id="add_user" class="add_button" onclick="add()"/>
+        <div class="form_outer">
+          <div class="form_inner">
+            First name: <input type="text" id="firstname"><br>
+            Last name: <input type="text" id="lastname"><br>
+            Email: <input type="text" id="email"><br>
+            <input type="button" value="Submit" id="submit" class="submit"/>
+          </div>
+        </div>
+          <table style="width:100%" id="user_details">
+            <caption>User Details</caption>
+            <thead>
+              <tr>
+                <th>
+                </th>
+                <th>
+                  First Name
+                </th>
+                <th>
+                  Last Name
+                </th>
+                <th>
+                  Email
+                </th>
+                <th>
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>&copy; Copyright 2015 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
