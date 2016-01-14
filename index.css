@@ -80,7 +80,7 @@ div.img {
   margin: 40px 10px 75px 100px;
 }
 .outer {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -99,7 +99,7 @@ div.img {
   height: 100%;
 }
 .display_block {
-  display: block;
+  display: block !important;
 }
 
 div.img img {
@@ -169,18 +169,19 @@ tr:nth-child(even) {
 .edit:hover {
   background-image: url('edit_hover.png');
 }
-.form_outer {
-  background-color: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
 .form_inner {
   width: 500px;
   height: 300px;
   display: none;
   position: absolute;
   left: 30%;
-  top: 20%;
+  top: 0%;
+  z-index: 999;
+  background-color: rgb(185, 198, 132);
+  text-align: center;
+}
+
+#firstname, #lastname, #email {
+  display: block;
+  margin-left: 125px;
 }
