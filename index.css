@@ -4,7 +4,6 @@ body {
   margin:0;
   padding:0;
   background-color: antiquewhite;
-
 }
 main {
   min-height: 77.5vh;
@@ -43,7 +42,6 @@ nav ul a {
   z-index: 200;
   height: 85px;
 }
-
 #top-nav .top-navbar {
   list-style:none;
   padding: 10px;
@@ -79,7 +77,7 @@ div.img {
   display: inline-block;
   margin: 40px 10px 75px 100px;
 }
-.outer {
+.outer, .form_outer{
   background-color: none;
   position: fixed;
   width: 100%;
@@ -154,13 +152,25 @@ th, td {
 tr:hover {
   background-color:#f5f5f5
 }
+tr td:first-child {
+  background-image: url('edit.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+tr td:first-child:hover {
+  background-image: url('edit_hover.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
 tr:nth-child(odd) {
   background-color: #f1f1f1;
 }
 tr:nth-child(even) {
   background-color: #ffffff;
 }
-.form_inner {
+.form_inner, .edit_inner{
   width: 500px;
   height: 300px;
   display: none;

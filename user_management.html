@@ -7,37 +7,44 @@
   <link rel="stylesheet" type="text/css" href="index.css">
   <script src="jquery.min.js"></script>
   <script type="text/javascript">
-  $(document).ready( function(){
+  $(document).ready(function(){
     $.getJSON('user_details.json', function(data) {
       $.each(data.details, function (i, f) {
-          $("#user_details tbody").append("<tr><td></td><td>"+f.firstname+"</td><td>"+f.lastname+"</td><td>"+f.email+"</td><td>"+f.status+"</td></tr>");
+          $("#user_details tbody").append("<tr><td class=\"editIcon\"></td><td>"+f.firstname+"</td><td>"+f.lastname+"</td><td>"+f.email+"</td><td>"+f.status+"</td></tr>");
       });
-  });
-  $("#cancel").click(function(){
-    $('.outer').removeClass('display_block');
-    $('.form_inner').removeClass('display_block');
+    });
+    $("#cancel").click(function(){
+      $('.form_outer').removeClass('display_block');
+      $('.form_inner').removeClass('display_block');
     });
     $("#submit").click(function(){
-      $('.outer').removeClass('display_block');
-    $('.form_inner').removeClass('display_block');
-         var first_name=$("#firstname").val();
-         var last_name= $("#lastname").val();
-         var email= $("#email").val();
-         if (firstname!="" && last_name!="" && email!="") {
-           $("#user_details tbody").append("<tr><td></td><td>"+first_name+"</td><td>"+last_name+"</td><td>"+email+"</td><td>active</td></tr>");
-           $("#firstname").val("");
-           $("#lastname").val("");
-           $("#email").val("");
-         }
-         else {
-           alert('fill all the fields');
-         }
+      $('.form_outer').removeClass('display_block');
+      $('.form_inner').removeClass('display_block');
+      var first_name=$("#firstname").val();
+      var last_name= $("#lastname").val();
+      var email= $("#email").val();
+      if (firstname!="" && last_name!="" && email!="") {
+        $("#user_details tbody").append("<tr><td class=\"editIcon\"></td><td>"+first_name+"</td><td>"+last_name+"</td><td>"+email+"</td><td>active</td></tr>");
+        $("#firstname").val("");
+        $("#lastname").val("");
+        $("#email").val("");
+      }
+      else {
+       alert('fill all the fields');
+      }
     });
+
   });
   function add() {
-    $('.outer').addClass('display_block');
+    $('.form_outer').addClass('display_block');
     $('.form_inner').addClass('display_block');
   }
+
+  $('.editIcon').on('click',function(){
+    console.log('clicked edit');
+    $('.outer').addClass('display_block');
+    $('.edit_inner').addClass('display_block');
+  });
   </script>
 </head>
   <body>
@@ -54,7 +61,7 @@
     <main id="home_page">
       <div style="margin:0px 40px 0px 40px">
         <input type="button" value="Add" id="add_user" class="add_button" onclick="add()" style="margin-top:10px"/>
-        <div class="outer">
+        <div class="form_outer">
           <div class="form_inner">
             <h3>Add User</h3>
             <label for="firstname">First Name</label><input type="text" id="firstname">
@@ -62,6 +69,19 @@
             <label for="firstname">Email</label><input type="text" id="email">
             <div style="padding:10px">
               <button id="submit">Submit</button>
+              <button id="cancel">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="outer">
+          <div class="edit_inner">
+            <h3>Edit User</h3>
+            <label for="firstname">First Name</label><input type="text" id="firstname">
+            <label for="firstname">Last Name</label><input type="text" id="lastname">
+            <label for="firstname">Email</label><input type="text" id="email">
+            <label for="status">Status:</label><input type="checkbox" id="status">
+            <div style="padding:10px">
+              <button id="edit_submit">Submit</button>
               <button id="cancel">Cancel</button>
             </div>
           </div>
