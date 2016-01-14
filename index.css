@@ -101,7 +101,6 @@ div.img {
 .display_block {
   display: block !important;
 }
-
 div.img img {
   width: 100%;
   height: auto;
@@ -139,12 +138,10 @@ div.desc {
 .page_links {
   margin-top: 30px;
 }
-
 #img_container {
   margin-bottom: 50px;
   padding: 10px 10px 10px 100px;
 }
-
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -163,12 +160,6 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
   background-color: #ffffff;
 }
-.edit {
-  background-image: url('edit.png');
-}
-.edit:hover {
-  background-image: url('edit_hover.png');
-}
 .form_inner {
   width: 500px;
   height: 300px;
@@ -180,7 +171,6 @@ tr:nth-child(even) {
   background-color: rgb(185, 198, 132);
   text-align: center;
 }
-
 #firstname, #lastname, #email {
   display: block;
   margin-left: 125px;
