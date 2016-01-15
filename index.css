@@ -181,7 +181,11 @@ tr:nth-child(even) {
   background-color: rgb(185, 198, 132);
   text-align: center;
 }
-#firstname, #lastname, #email {
+#firstname, #lastname, #email, #first_name, #last_name, #email_text{
   display: block;
   margin-left: 125px;
+}
+.search_container {
+  float: right;
+  padding-top: 10px;
 }
