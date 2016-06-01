@@ -10,13 +10,13 @@
     $(document).ready( function(){
       $.getJSON('image.json', function(data) {
         $.each(data.items, function (i, f) {
-            $("#img_container").append("<div class='img'><img src='" + f.url +"' width='400' height='300'/><div class='desc'>" +f.caption
+            $("#img_container").append("<div class='img'><img src='" + f.url +"' width='100%'/><div class='desc'>" +f.caption
                            + " </div></div>");
         });
     });
     $('#img_container').on('click', '.img', function(event){
       var src = event.target.src;
-      $('.inner').html('<img src="'+event.target.src+'"/>');
+      $('.inner').html('<img src="'+event.target.src+'" width="100%"/> ');
       $('.outer').addClass('display_block');
       $('.inner').addClass('display_block');
     });
@@ -42,7 +42,7 @@
 <div class="inner">
 </div>
 </div>
-<div style="padding: 10px 10px 10px 10px" id="img_container" class="overlay_image">
+<div id="img_container" class="overlay_image">
 
 </div>
 </main>

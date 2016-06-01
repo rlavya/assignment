@@ -87,7 +87,7 @@ div.img {
   display: none;
 }
 .inner {
-  width: 500px;
+  width: 50%;
   height: 300px;
   display: none;
   position: absolute;
@@ -95,17 +95,16 @@ div.img {
   top: 20%;
 }
 .inner img {
-  width: 100%;
   height: 100%;
 }
 .display_block {
   display: block;
 }
 
-div.img img {
+/*div.img img {
   width: 100%;
   height: auto;
-}
+}*/
 div.desc {
   padding: 15px 15px 15px 15px;
   text-align: center;
@@ -142,5 +141,82 @@ div.desc {
 
 #img_container {
   margin-bottom: 50px;
-  padding: 10px 10px 10px 100px;
+  padding: 10px;
+}
+@media(max-width: 1057px) {
+    div.img {
+        margin: 40px 10px 50px 60px;
+        width: 24%;
+    }
+}
+@media(max-width: 986px) {
+    div.img {
+        margin: 40px 10px 50px 100px;
+        width: 28.5%;
+    }
+    .inner {
+        left: 27%;
+    }
+}
+@media(max-width: 800px) {
+    div.img {
+        margin: 40px 10px 50px 80px;
+        width: 33.5%;
+    }
+    .inner {
+        left: 22%;
+        width: 60%;
+    }
+}
+@media(max-width: 730px) {
+    div.img {
+        margin: 40px 10px 50px 50px;
+        width: 35.5%;
+    }
+    .inner {
+        left: 16%;
+        width: 63%;
+    }
+}
+@media(max-width: 650px) {
+    div.img {
+        margin: 40px 10px 30px 40px;
+        width: 37%;
+    }
+    .inner {
+        height: 250px;
+        top: 25%;
+    }
+}
+@media(max-width: 590px) {
+    div.img {
+        margin: 40px 10px 20px 30px;
+        width: 38%;
+    }
+    .inner {
+        height: 240px;
+        top: 28%;
+    }
+}
+@media(max-width: 539px) {
+    div.img {
+        margin: 40px 10px 20px 80px;
+        width: 55%;
+    }
+    .inner {
+        height: 240px;
+        width: 65%;
+        left: 15%;
+        top: 30%;
+    }
+}
+@media(max-width: 408px) {
+    div.img {
+        margin: 40px 10px 20px 50px;
+        width: 65%;
+    }
+    .inner {
+        width: 75%;
+        left: 13%;
+    }
 }
