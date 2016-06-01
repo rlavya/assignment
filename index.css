@@ -232,7 +232,7 @@ div.desc {
         top: 25%;
     }
     #header {
-        height: 190px;
+        height: 12vh;
     }
     #img_container {
         margin-top: 100px;
@@ -240,7 +240,7 @@ div.desc {
     }
     #footer {
         font-size: 40px;
-        height: 100px;
+        height: 6vh;
     }
     #footer p {
         padding-top: 25px;
