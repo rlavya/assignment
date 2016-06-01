@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My website</title>
+  <link href="logo.png" rel="icon">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+  <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+  <body>
+    <header id="header">
+      <div id="top-nav">
+        <div class="top-navbar">
+          <center class="inner-nav" id="heading"><a href="index.html" >My website</a></center>
+          <div class="inner-nav page_links" style="float:left"><a href="home.html">Home</a></div>
+          <div class="inner-nav page_links " style="float:left"><a href="gallery.html">Gallery</a></div>
+          <div class="inner-nav page_links " style="float:left"><a href="user_management.html">User Management</a></div>
+        </div>
+      </div>
+    </header>
+    <main id="home_page">
+      <div style="margin:0px 40px 0px 40px">
+        <input type="button" value="Add" id="add_user" class="add_button" onclick="add()" style="margin-top:10px"/>
+        <div class="form_outer">
+          <div class="form_inner">
+            <h3>Add User</h3>
+              <label for="firstname">First Name</label><input type="text" id="firstname">
+              <label for="lastname">Last Name</label><input type="text" id="lastname">
+              <label for="email">Email</label><input type="text" id="email">
+              <div style="padding:10px">
+                <button id="submit">Submit</button>
+                <button id="cancel">Cancel</button>
+              </div>
+          </div>
+        </div>
+        <div class="search_container">
+            <input type="text" id="search_box" placeholder="Search">
+        </div>
+        <div class="outer">
+          <div class="edit_inner">
+            <h3>Edit User</h3>
+            <label for="first_name">First Name</label><input type="text" id="first_name">
+            <label for="last_name">Last Name</label><input type="text" id="last_name">
+            <label for="email_text">Email</label><input type="text" id="email_text">
+            <label for="status">Status:</label><select id="status"><option>Active</option><option>Inactive</option></select>
+            <div style="padding:10px">
+              <button id="edit_submit">Submit</button>
+              <button id="edit_cancel">Cancel</button>
+            </div>
+          </div>
+        </div>
+          <table style="width:100%" id="user_details">
+            <caption><h2>User Details</h2></caption>
+              <thead>
+              <tr>
+                <th>
+                </th>
+                <th>
+                  First Name
+                </th>
+                <th>
+                  Last Name
+                </th>
+                <th>
+                  Email
+                </th>
+                <th>
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>&copy; Copyright 2015 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
