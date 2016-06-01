@@ -247,6 +247,8 @@ div.desc {
     }
     center.inner-nav {
         padding-top: 10px !important;
+        position: absolute;
+        margin-left: 27%;
     }
     center.inner-nav a {
         color: #172525 !important;
