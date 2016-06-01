@@ -213,7 +213,7 @@ div.desc {
         left: 13%;
     }
 }
-@media screen and (max-device-width: 408px) {
+@media screen and (max-device-width: 360px) {
     div.img {
         margin: 40px 10px 50px 50px;
         width: 42%;
@@ -232,7 +232,7 @@ div.desc {
         top: 25%;
     }
     #header {
-        height: 11%;
+        height: 190px;
     }
     #img_container {
         margin-top: 100px;
