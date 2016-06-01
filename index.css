@@ -98,15 +98,6 @@ div.img {
 .display_block {
   display: block !important;
 }
-<<<<<<< HEAD
-
-/*div.img img {
-=======
-div.img img {
->>>>>>> ce0f02842a8fe54db971719bbad72a51c91bb9ba
-  width: 100%;
-  height: auto;
-}*/
 div.desc {
   padding: 15px 15px 15px 15px;
   text-align: center;
